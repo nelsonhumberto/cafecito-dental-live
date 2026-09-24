@@ -19,13 +19,13 @@
 @media(max-width:650px){.nav{height:62px;padding:0 15px}.nav nav{gap:12px}.nav-active{display:none}.nav .text-button{font-size:9px}main{padding:18px 15px 0}.intro h1{font-size:29px}.call-box{margin-top:15px}.phone{font-size:24px}.journey{padding:12px 8px}.studio-heading{margin-top:15px}}
 
 @media(min-width:651px) and (max-width:1050px){
- .studio-grid{gap:12px;grid-template-rows:minmax(330px,calc(100dvh - 590px)) 230px}
+ .studio-grid{gap:12px;grid-template-rows:minmax(330px,calc(100dvh - 610px)) 230px}
  .conversation,.identity,.identity.intake-mode{height:100%;min-height:0}.identity{overflow-y:auto}
  .right-column{gap:12px;min-height:0}.appointment,.activity{height:230px;min-height:0;overflow-y:auto}
  .panel-head{padding:12px 16px}.maya-bar{padding:9px 0}.identity-stage,.intake-mode .identity-stage{height:80px;min-height:80px;margin:0;flex-shrink:0}
  .identity-icon{width:56px;height:56px;font-size:22px}.orbit-one{width:70px;height:70px}.orbit-two{width:80px;height:80px}
  .identity-title{margin:7px}.identity-title h3{font-size:21px}.identity-title p{margin-top:3px}.checks>div{padding:6px 0}.identity-footer{padding:8px 16px}
  .appointment-empty{padding:0 0 12px}.calendar-icon{margin-bottom:10px}.bottom-strip{display:none}footer{padding:9px 0}
- .intro-collapsed .studio-grid{grid-template-rows:minmax(330px,calc(100dvh - 473px)) 230px}
+ .intro-collapsed .studio-grid{grid-template-rows:minmax(330px,calc(100dvh - 530px)) 230px}
 }
 @media(max-width:650px){.intro-collapsed .call-box{flex-wrap:wrap;gap:6px}.intro-collapsed .controls{margin:0}.intro-collapsed .phone{font-size:22px}}
