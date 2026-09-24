@@ -5,9 +5,9 @@
 [hidden]{display:none!important}.identity.intake-mode{height:auto;min-height:550px}.intake-mode .identity-stage{height:100px;margin-top:0}.intake-mode .identity-title{margin-top:5px}.intake-details{padding:18px 22px}.intake-heading{font-size:9px;font-weight:700;letter-spacing:1px;margin-bottom:10px}.intake-heading span{display:block;font-size:9px;font-weight:400;letter-spacing:0;color:#849078;margin-top:5px}.intake-field{padding:12px 0;border-bottom:1px solid var(--line)}.intake-field>span{font-size:10px;color:#7a876f;display:block}.intake-field strong{font-size:12px;font-weight:500;line-height:1.6;display:block;margin:5px 0;overflow-wrap:anywhere}.intake-field small{font-size:9px;color:#7b8b6c}.available-slots{padding:0 21px 20px}.slot-option{padding:10px 12px;border:1px solid #dde5d4;border-radius:7px;margin-bottom:7px;background:#f3f5ed}.slot-option strong{display:block;font-size:11px;font-weight:600;line-height:1.6}.slot-option span,.available-slots>small{display:block;font-size:9px;color:#7e8d70;line-height:1.6}.appointment{min-height:290px;flex-shrink:0}
 
 /* Compact presentation layout: keep the brand and working panels in view. */
-.nav{height:62px;gap:35px;position:sticky;top:0;background:#f6f4ee;z-index:5}.brand{font-size:25px}.brand-symbol{font-size:35px}.brand-sub{font-size:8px;margin-top:6px}.nav nav{gap:22px}main{padding-top:16px}.intro{gap:20px}.intro h1{font-size:29px;letter-spacing:-.7px;margin-top:7px;line-height:1.12}.intro p{font-size:11px;margin-top:7px}.intro .eyebrow{font-size:8px;letter-spacing:1.5px}.call-box{padding-top:0}.phone{font-size:24px;margin:5px 0}.controls{margin-top:8px}.controls .button{padding:9px 12px}.journey{margin-top:16px;padding:12px 20px}.studio-heading{margin:14px 0 10px}.bottom-strip{padding:12px 0}footer{padding:12px 0}.intro-collapsed .intro{display:none}.intro-collapsed .journey{margin-top:0}
+.nav{height:62px;gap:35px;position:sticky;top:0;background:#f6f4ee;z-index:5}.brand{font-size:25px}.brand-symbol{font-size:35px}.brand-sub{font-size:8px;margin-top:6px}.nav nav{gap:22px}main{padding-top:16px}.intro{gap:20px}.intro h1{font-size:29px;letter-spacing:-.7px;margin-top:7px;line-height:1.12}.intro p{font-size:11px;margin-top:7px}.intro .eyebrow{font-size:8px;letter-spacing:1.5px}.call-box{padding-top:0}.phone{font-size:24px;margin:5px 0}.controls{margin-top:8px}.controls .button{padding:9px 12px}.journey{margin-top:16px;padding:12px 20px}.studio-heading{margin:14px 0 10px}.bottom-strip{padding:12px 0}footer{padding:12px 0}.intro-collapsed #introCopy{display:none}.intro-collapsed .call-box{display:flex;align-items:center;gap:16px;width:100%;margin-top:0}.intro-collapsed .call-box>.eyebrow,.intro-collapsed .call-box>.small{display:none}.intro-collapsed .controls{margin:0 0 0 auto}.intro-collapsed .journey{margin-top:12px}
 @media(min-width:1051px){
- main{--studio-offset:294px}.intro-collapsed main{--studio-offset:175px}
+ main{--studio-offset:294px}.intro-collapsed main{--studio-offset:232px}
  .intro h1 br{display:none}.intro h1 em:before{content:' '}.intro h1{font-size:clamp(24px,2.25vw,32px)}
  .studio-grid{height:max(430px,calc(100dvh - var(--studio-offset)));align-items:stretch}
  .conversation,.identity,.identity.intake-mode{height:100%;min-height:0}
@@ -17,3 +17,15 @@
  .identity-stage,.intake-mode .identity-stage{height:110px;min-height:100px;margin-top:0;flex-shrink:0}.identity-icon{height:65px;width:65px;font-size:25px}.orbit-one{width:96px;height:96px}.orbit-two{width:112px;height:112px}.identity-title{margin:10px 8px}.identity-title h3{font-size:21px}.identity-title p{margin-top:5px}.checks>div{padding:7px 0}.identity-footer{padding:9px 18px}.intake-details{padding:10px 20px}.intake-field{padding:8px 0}.visit{padding-bottom:10px}.visit-date{margin-bottom:10px}.visit-row{padding:6px 0}.bottom-strip{display:none}footer{padding:9px 0}
 }
 @media(max-width:650px){.nav{height:62px;padding:0 15px}.nav nav{gap:12px}.nav-active{display:none}.nav .text-button{font-size:9px}main{padding:18px 15px 0}.intro h1{font-size:29px}.call-box{margin-top:15px}.phone{font-size:24px}.journey{padding:12px 8px}.studio-heading{margin-top:15px}}
+
+@media(min-width:651px) and (max-width:1050px){
+ .studio-grid{gap:12px;grid-template-rows:minmax(330px,calc(100dvh - 590px)) 230px}
+ .conversation,.identity,.identity.intake-mode{height:100%;min-height:0}.identity{overflow-y:auto}
+ .right-column{gap:12px;min-height:0}.appointment,.activity{height:230px;min-height:0;overflow-y:auto}
+ .panel-head{padding:12px 16px}.maya-bar{padding:9px 0}.identity-stage,.intake-mode .identity-stage{height:80px;min-height:80px;margin:0;flex-shrink:0}
+ .identity-icon{width:56px;height:56px;font-size:22px}.orbit-one{width:70px;height:70px}.orbit-two{width:80px;height:80px}
+ .identity-title{margin:7px}.identity-title h3{font-size:21px}.identity-title p{margin-top:3px}.checks>div{padding:6px 0}.identity-footer{padding:8px 16px}
+ .appointment-empty{padding:0 0 12px}.calendar-icon{margin-bottom:10px}.bottom-strip{display:none}footer{padding:9px 0}
+ .intro-collapsed .studio-grid{grid-template-rows:minmax(330px,calc(100dvh - 473px)) 230px}
+}
+@media(max-width:650px){.intro-collapsed .call-box{flex-wrap:wrap;gap:6px}.intro-collapsed .controls{margin:0}.intro-collapsed .phone{font-size:22px}}
