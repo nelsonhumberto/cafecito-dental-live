@@ -1,0 +1,15 @@
+{
+  "name": "cafecito-live-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4173",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4173",
+    "build:pages": "vite build --base=/cafecito-dental-live/ --outDir=docs && touch docs/.nojekyll"
+  },
+  "devDependencies": {
+    "vite": "^7.3.0"
+  }
+}
