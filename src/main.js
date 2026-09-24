@@ -77,3 +77,5 @@ $('rehearseBtn').onclick=()=>{
  steps.forEach((fn,i)=>timers.push(setTimeout(()=>{fn();s.revision++;s.updated_at=Date.now();render(s);},i*4500)));
 };
 render(null);if(token)connect();
+
+$('headerToggle').onclick=()=>{const collapsed=document.body.classList.toggle('intro-collapsed');$('headerToggle').setAttribute('aria-expanded',String(!collapsed));$('headerToggle').textContent=collapsed?'Show intro ↓':'Hide intro ↑';};
