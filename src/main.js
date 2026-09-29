@@ -20,7 +20,7 @@ function render(s){
  $('modeDot').className='status-dot '+(rehearsal?'rehearsal':s?.status==='active'?'live':'');
  $('modeLabel').textContent=rehearsal?'REHEARSAL · SIMULATED':s?.status==='active'?'LIVE CALL':s?'CALL COMPLETE':mode==='live'?'WAITING FOR A CALL':'READY WHEN YOU ARE';
  $('connectionText').textContent=rehearsal?'A scripted preview of the experience':mode==='live'?'Connected to your cloud receptionist':'Connect your presenter view or try a rehearsal';
- $('transcriptBadge').textContent=rehearsal?'Rehearsal':'Live transcript';
+ $('transcriptBadge').textContent=rehearsal?'Rehearsal':s?.voice_mode==='elevenlabs'?'ElevenLabs v4 Turbo':s?.voice_mode==='original'?'OpenAI Live':'Live transcript';
  $('mayaState').textContent=s?.status==='ended'?'Conversation complete':({speaking:'Maya is speaking',thinking:'Checking the back office',listening:'Listening to the caller'}[s?.agent_state]||'Your AI receptionist');
  $('wave').classList.toggle('speaking',s?.agent_state==='speaking');
  $('feedFoot').textContent=rehearsal?'Scripted demo · no call placed':s?'Live captions · may contain errors':'Waiting for a conversation';
