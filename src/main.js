@@ -23,7 +23,7 @@ function render(s){
  $('transcriptBadge').textContent=rehearsal?'Rehearsal':s?.voice_mode==='elevenlabs'?'ElevenLabs v4 Turbo':s?.voice_mode==='original'?'OpenAI Live':'Live transcript';
  $('mayaState').textContent=s?.status==='ended'?'Conversation complete':({speaking:'Maya is speaking',thinking:'Checking the back office',listening:'Listening to the caller'}[s?.agent_state]||'Your AI receptionist');
  $('wave').classList.toggle('speaking',s?.agent_state==='speaking');
- $('feedFoot').textContent=rehearsal?'Scripted demo · no call placed':s?'Live captions · may contain errors':'Waiting for a conversation';
+ $('feedFoot').textContent=rehearsal?'Scripted demo · no call placed':s?`Live captions · ${s.background_level===0?'ambience off':`ambience ${s.background_level??70}%`}`:'Waiting for a conversation';
  const rows=s?.transcripts||[], nearBottom=$('transcript').scrollHeight-$('transcript').scrollTop-$('transcript').clientHeight<80;
  const revision=(s?.id||'')+':'+(s?.revision??0);
  if(lastRevision!==revision){setMarkup('transcript',rows.length?rows.map(r=>`<div class="message ${r.role==='assistant'?'assistant':'user'}"><span class="speaker">${r.role==='assistant'?'MAYA':'CALLER'}${r.final?'':' · listening'}</span><p class="bubble">${esc(r.text)}</p></div>`).join(''):initial.transcript);if(nearBottom)$('transcript').scrollTop=$('transcript').scrollHeight;lastRevision=revision;}
